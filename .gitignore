@@ -11,3 +11,4 @@
 /rclone-*-borg-repo.log
 /newcomb-backups-1-f86aa4016b65.json
 /.gitconfig
+/.ssh/known_hosts
