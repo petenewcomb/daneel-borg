@@ -1,0 +1,13 @@
+/.bash_history
+/.bash_logout
+/.bashrc
+/.cache/
+/.config/
+/.emacs.d/
+/.lesshst
+/.profile
+/.ssh/id_rsa
+/.ssh/id_rsa.pub
+/rclone-*-borg-repo.log
+/newcomb-backups-1-f86aa4016b65.json
+/.gitconfig
