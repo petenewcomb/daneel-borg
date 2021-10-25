@@ -1,4 +1,9 @@
 #!/bin/bash
 
-diff -ru /etc etc | fgrep -v 'Only in /etc'
-diff -ru /root etc | fgrep -v 'Only in /root'
+set -e
+
+cd "${BASH_SOURCE[0]%/*}"
+
+for d in etc root; do
+    diff -ru "/$d" "$d" | fgrep -v "Only in /$d"
+done
