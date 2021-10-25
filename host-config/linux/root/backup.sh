@@ -47,17 +47,17 @@ fi
 
 set -e
 
-/usr/bin/borgmatic --info
-/usr/bin/borgmatic --list
+borgmatic --info
+borgmatic --list
 
 echo; echo
 
-/usr/bin/borgmatic
+borgmatic
 
 echo; echo
 
-/usr/bin/borgmatic --info
-/usr/bin/borgmatic --list
+borgmatic --info
+borgmatic --list
 
 status=$?
 echo "Backup ended: $(date)"
