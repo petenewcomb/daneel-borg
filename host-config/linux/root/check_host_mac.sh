@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ip="$1"; shift
 mac="$1"; shift

@@ -7,7 +7,7 @@ location:
         - /root
         - /etc
         - /home
-        - /mnt/b/Users/isaac
+        - /mnt/b/Users
 
     # Paths to local or remote repositories (required). Tildes are expanded. Multiple
     # repositories are backed up to in sequence. See ssh_command for SSH options like
@@ -58,13 +58,8 @@ location:
     exclude_patterns:
         - /tmp
         - /var/tmp
-        - /data/home
-        - /root/.cache
         - /root/.apgbf
-        - /home/*/.cache
         - /home/*/.apgbf
-        - /home/*/.thunderbird/*/*.msf
-        - /home/*/.thunderbird/*/global-messages-db.sqlite
 
     # Read exclude patterns from one or more separate named files, one pattern per
     # line. See the output of "borg help patterns" for more details.
@@ -88,7 +83,7 @@ storage:
     # use on repositories that were initialized with passcommand/repokey encryption.
     # Note that if both encryption_passcommand and encryption_passphrase are set,
     # then encryption_passphrase takes precedence. Defaults to not set.
-    #encryption_passcommand: secret-tool lookup borg-repository exocomp
+    #encryption_passcommand: secret-tool lookup borg-repository ***HOSTNAME***
 
     # Passphrase to unlock the encryption key with. Only use on repositories that were
     # initialized with passphrase/repokey encryption. Quote the value if it contains
@@ -110,7 +105,6 @@ storage:
     # Type of compression to use when creating archives. See
     # https://borgbackup.readthedocs.org/en/stable/usage.html#borg-create for details.
     # Defaults to no compression.
-#    compression: lz4
     compression: auto,zstd
 
     # Remote network upload rate limit in kiBytes/second. Defaults to unlimited.
