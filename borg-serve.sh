@@ -16,4 +16,5 @@ cd "$repo"
 set +e
 borg serve --lock-wait 60 --restrict-to-path "$repo"
 
+export COOL_DOWN_PERIOD=1800
 setsid "$rclone_cmd" "$repo/repo" "gcs-backups:${host}-borg-repo" </dev/null >>"$HOME/rclone-$host-borg-repo.log" 2>&1 &
