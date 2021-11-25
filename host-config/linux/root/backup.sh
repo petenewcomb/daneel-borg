@@ -1,5 +1,7 @@
 #!/bin/bash
 
+(if ! flock -n 9; then echo 'Backup still running, skipping new invocation' >&2; exit 1; fi
+
 set -e
 
 /usr/sbin/logrotate -s /var/lib/logrotate/backup-status /root/backup-logrotate.conf
@@ -62,3 +64,5 @@ borgmatic --list
 status=$?
 echo "Backup ended: $(date)"
 exit $status
+
+) 9>/var/lock/backup.lock
