@@ -54,7 +54,7 @@ borgmatic --list
 
 echo; echo
 
-borgmatic
+borgmatic --stats
 
 echo; echo
 
