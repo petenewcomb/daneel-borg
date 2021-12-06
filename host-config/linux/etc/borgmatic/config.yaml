@@ -55,8 +55,9 @@ location:
     # Any paths matching these patterns are excluded from backups. Globs and tildes
     # are expanded. See the output of "borg help patterns" for more details.
     exclude_patterns:
-        - /tmp
-        - /var/tmp
+        - /swapfile
+        - /tmp/*
+        - /var/tmp/*
         - /root/.apgbf
         - /home/*/.apgbf
 
